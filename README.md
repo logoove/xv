@@ -5,11 +5,12 @@
 
 ### 独有特点
 
-- 使用缓存技术,比如获取版本第一次慢,后面很快.
+- 使用缓存,程序初次运行释放配置文件xv.yaml在运行目录,所有版本号获取都缓存存到配置文件.
 - 中英文支持,根据系统自动显示,一般本地win中文,linux服务器英文.
-- 支持设置下载地址,内置多个可切换,可以缓存地址方便下次使用.
+- 支持普通下载文件使用`xv get url`如果是github的zip会自动使用加速下载.
 - 友好的提示,这是一个学习go作品,参考了其他类似工具,主要是解决go/py/node/flutter管理版本.
-
+- win下运行需要管理员权限的cmd
+- 命令都是每个语言首字母+命令组成,尽量简化到输入简单.
 ### 参考命令
 ~~~
 gls    列出go已安装版本
@@ -17,41 +18,40 @@ gall   列出go可安装版本
 gi     安装go指定版本
 gu     卸载go指定版本
 guse   设置go默认版本
-gset   设置go代理地址,不能下载时候设置,可选1,2,3
 gdel   删除go所有安装包
+
 pls    列出python已安装版本
 pall   列出python可安装版本
 pi     安装python指定版本
 pu     卸载python指定版本
 puse   设置python默认版本
-pset   设置python代理地址,不能下载时候设置,可选1,2,3
 pdel   删除python所有安装包
+
 nall   列出node可安装版本
 nls    列出node已安装版本
 ni     安装node指定版本
 nu     卸载node指定版本
 nuse   设置node默认版本
-nset   设置node代理地址,不能下载时候设置,可选1,2,3
 ndel   删除node所有安装包
+
 fall   列出flutter可安装版本
 fls    列出flutter已安装版本
 fi     安装flutter指定版本
 fu     卸载flutter指定版本
 fuse   设置flutter默认版本
-fset   设置flutter代理地址,不能下载时候设置,可选1,2,3
 fdel   删除flutter所有安装包
+
+get   下载安装包到桌面
 
 xv gls //列出已安装go版本
 xv gall //列出可安装go版本
-xv gi 1.17.1 //安装go
-xv gu 1.17.1 //卸载go
-xv guse 1.17.1 //设置默认go版本
-xv gset 1 //设置下载代理地址
+xv gi 1.19 //安装go
+xv gu 1.19 //卸载go
+xv guse 1.19 //设置默认go版本
 xv gdel //清空下载目录
 xv -v //查看版本
 xv gls -h 查看这个命令帮助和例子
 ~~~
-命令都是每个语言首字母+命令组成,尽量简化到输入简单.
 
 ### Go
 
@@ -80,14 +80,14 @@ win 设置
 
 - 输入npm config lis找到 .npmrc配置
 ~~~
-  registry=https://registry.npm.taobao.org/
+  registry=http://registry.npmmirror.com
   prefix=C:\app\nodejs\node-global
   cache=C:\app\nodejs\node-cache
   python=C:\app\python\version\2.7.1\python.exe
 ~~~
 常见模块
 ~~~
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm install -g cnpm --registry=http://registry.npmmirror.com
 npm install -g  less
 npm install -g  sass
 npm install -g express

@@ -1,0 +1,48 @@
+cn:
+    cmd: |-
+        这是一个命令行工具
+        您需要打开cmd.exe并从那里运行它
+    desc: 一个支持go,python,nodejs,flutter的版本下载管理工具,命令需要管理员权限下执行
+    name: 版本管理下载工具
+furl: https://storage.flutter-io.cn/flutter_infra_release/releases
+giturl: https://ghproxy.com/
+gover:
+    - "1.19"
+    - 1.18.4
+    - 1.13rc1
+    - 1.17.12
+    - 1.18.3
+    - 1.17.11
+    - 1.18.2
+    - 1.17.10
+    - 1.18.1
+    - 1.17.9
+    - "1.18"
+    - 1.17.8
+    - 1.16.15
+    - 1.17.7
+    - 1.16.14
+    - 1.17.6
+    - 1.16.13
+    - 1.17.5
+    - 1.16.12
+    - 1.17.4
+    - 1.16.11
+    - 1.17.3
+    - 1.16.10
+    - 1.17.2
+    - 1.16.9
+    - 1.17.1
+    - 1.16.8
+    - "1.17"
+    - 1.16.7
+gurl: https://studygolang.com/dl
+nurl: https://nodejs.org/download/release
+purl: https://www.python.org/ftp/python
+us:
+    cmd: |-
+        This is a command line tool
+        You need to open cmd.exe and run it from there.
+    desc: A support go, python, nodejs, flutter download version management tools.You need administrator rights command execution.
+    name: Download version management tools
+ver: 1.2.0
